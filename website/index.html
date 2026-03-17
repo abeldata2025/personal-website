@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abel Wabella Sugebo — Media Integrity & AI Governance Expert</title>
+<meta name="description" content="Abel Wabella Sugebo is a media integrity researcher, AI governance expert, and founder of Inform Africa/HaqCheck. Based in Washington, DC.">
+<meta name="keywords" content="Abel Sugebo, disinformation, AI safety, media integrity, fact-checking, HaqCheck, Inform Africa, digital policy, OSINT, trust and safety">
+<meta property="og:title" content="Abel Wabella Sugebo — Media Integrity & AI Governance Expert">
+<meta property="og:description" content="Researcher, founder, and advocate working at the intersection of AI safety, information integrity, and platform accountability.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --color-bg: #0B1120;
+  --color-bg-alt: #111827;
+  --color-bg-card: #1A2332;
+  --color-bg-card-hover: #1F2A3C;
+  --color-surface: #243044;
+  --color-text: #E8ECF1;
+  --color-text-muted: #8896AA;
+  --color-text-dim: #5C6B82;
+  --color-accent: #D4954A;
+  --color-accent-light: #E8B06A;
+  --color-accent-glow: rgba(212,149,74,0.12);
+  --color-border: rgba(255,255,255,0.06);
+  --color-border-accent: rgba(212,149,74,0.25);
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --max-width: 1140px;
+  --section-pad: clamp(4rem, 8vw, 7rem);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--color-accent-light); }
+::selection { background: var(--color-accent); color: var(--color-bg); }
+
+/* ===== UTILITY ===== */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+.divider {
+  width: 48px; height: 2px;
+  background: var(--color-accent);
+  margin: 2rem 0;
+  border: none;
+}
+
+/* ===== REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(11,17,32,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+.nav-logo span { color: var(--color-accent); }
+.nav-links { display: flex; gap: 1.75rem; align-items: center; }
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--color-accent); }
+.nav-cta {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: var(--color-bg) !important;
+  background: var(--color-accent);
+  padding: 0.45rem 1.1rem;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.15s !important;
+}
+.nav-cta:hover { background: var(--color-accent-light) !important; transform: translateY(-1px); }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 28px; height: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+.menu-toggle span {
+  display: block; width: 100%; height: 2px;
+  background: var(--color-text-muted);
+  position: absolute; left: 0;
+  transition: all 0.3s;
+}
+.menu-toggle span:nth-child(1) { top: 2px; }
+.menu-toggle span:nth-child(2) { top: 11px; }
+.menu-toggle span:nth-child(3) { top: 20px; }
+.menu-toggle.open span:nth-child(1) { top: 11px; transform: rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { top: 11px; transform: rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links {
+    position: fixed; top: 68px; left: 0; right: 0;
+    background: rgba(11,17,32,0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1.5rem 2rem 2rem;
+    gap: 1rem;
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: transform 0.35s, opacity 0.3s;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .nav-links.open { transform: translateY(0); opacity: 1; }
+  .nav-links a { font-size: 1rem; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(7rem, 14vw, 10rem) 0 var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(212,149,74,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(60,90,140,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  position: relative;
+}
+.hero-text { animation: fadeUp 0.8s ease-out both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  line-height: 1.12;
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--color-accent);
+  position: relative;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 2.25rem;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+.btn-primary:hover { background: var(--color-accent-light); color: var(--color-bg); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+.btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+.hero-photo {
+  animation: fadeUp 0.8s 0.15s ease-out both;
+}
+.hero-photo-frame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+.hero-photo-frame::after {
+  content: '';
+  position: absolute; inset: 0;
+  border: 1px solid rgba(212,149,74,0.15);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-surface) 100%);
+  color: var(--color-text-dim);
+  font-size: 0.8rem;
+  gap: 0.75rem;
+}
+.photo-placeholder svg { opacity: 0.4; }
+.hero-badges {
+  display: flex; gap: 0.6rem; flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 3px;
+  background: var(--color-accent-glow);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border-accent);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-photo { order: -1; max-width: 240px; margin: 0 auto; }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-badges { justify-content: center; }
+}
+
+/* ===== CREDENTIALS BAR ===== */
+.credentials {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.5rem 0;
+}
+.cred-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.cred-item { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; }
+.cred-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.cred-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+.cred-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+@media (max-width: 600px) {
+  .cred-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* ===== ABOUT ===== */
+.about { padding: var(--section-pad) 0; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.about-text p { color: var(--color-text-muted); margin-bottom: 1.25rem; }
+.about-text p:first-of-type { color: var(--color-text); font-size: 1.05rem; }
+.expertise-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.5rem;
+  margin-top: 1.5rem;
+}
+.expertise-list li {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  padding-left: 1.1rem;
+  position: relative;
+}
+.expertise-list li::before {
+  content: '';
+  position: absolute; left: 0; top: 0.55rem;
+  width: 5px; height: 5px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+.about-sidebar {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.sidebar-section { margin-bottom: 2rem; }
+.sidebar-section:last-child { margin-bottom: 0; }
+.sidebar-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+.sidebar-item {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+.sidebar-item strong { color: var(--color-text); font-weight: 600; }
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .expertise-list { grid-template-columns: 1fr; }
+}
+
+/* ===== CV SECTION ===== */
+.cv { padding: var(--section-pad) 0; background: var(--color-bg-alt); }
+.timeline { margin-top: 2rem; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-dates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  letter-spacing: 0.03em;
+  padding-top: 0.15rem;
+}
+.timeline-role {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-bottom: 0.15rem;
+}
+.timeline-org {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+.cv-download {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+
+/* ===== SELECTED WORK ===== */
+.work { padding: var(--section-pad) 0; }
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.work-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.work-card:hover {
+  border-color: var(--color-border-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+.work-card-type {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+.work-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.work-card-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+.work-card-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-card-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+.work-card-link:hover { text-decoration: underline; }
+
+/* ===== MEDIA MENTIONS ===== */
+.media {
+  padding: var(--section-pad) 0;
+  background: var(--color-bg-alt);
+}
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.media-item {
+  padding: 1.5rem;
+  border-left: 2px solid var(--color-surface);
+  transition: border-color 0.2s;
+}
+.media-item:hover { border-color: var(--color-accent); }
+.media-source {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-bottom: 0.5rem;
+}
+.media-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+.media-excerpt {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* ===== COLLABORATE ===== */
+.collaborate { padding: var(--section-pad) 0; }
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.collab-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.collab-card:hover { border-color: var(--color-border-accent); }
+.collab-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 1rem;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-accent-glow);
+  border-radius: 8px;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+}
+.collab-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.collab-desc {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: var(--section-pad) 0;
+  background: var(--color-bg-alt);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: 2rem;
+}
+.contact-info p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 440px;
+  line-height: 1.7;
+}
+.contact-methods { display: flex; flex-direction: column; gap: 1rem; }
+.contact-method {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.92rem;
+}
+.contact-method-icon {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-accent-glow);
+  border-radius: 6px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+.social-links {
+  display: flex; gap: 0.75rem;
+  margin-top: 2rem;
+}
+.social-link {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.social-link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-glow);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+.form-input, .form-textarea {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-input:focus, .form-textarea:focus { border-color: var(--color-accent); }
+.form-textarea { resize: vertical; min-height: 120px; }
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-text {
+  font-size: 0.78rem;
+  color: var(--color-text-dim);
+}
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a {
+  font-size: 0.78rem;
+  color: var(--color-text-dim);
+}
+.footer-links a:hover { color: var(--color-accent); }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Abel <span>W.</span> Sugebo</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#cv">Resume</a>
+      <a href="#work">Work</a>
+      <a href="#media">Media</a>
+      <a href="#collaborate">Collaborate</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Media Integrity &bull; AI Governance &bull; Digital Rights</span>
+        <h1 class="hero-title">Defending the<br><em>integrity of information</em><br>in the age of AI</h1>
+        <p class="hero-subtitle">
+          I'm Abel Wabella Sugebo, a researcher and practitioner working at the intersection of disinformation analysis, AI safety, and platform accountability. Founder of Inform Africa and Ethiopia's first IFCN-accredited fact-checking initiative.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Work With Me</a>
+          <a href="#work" class="btn btn-outline">View Selected Work</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">OSINT &amp; DISARM</span>
+          <span class="badge">Trust &amp; Safety</span>
+          <span class="badge">AI Governance</span>
+          <span class="badge">Platform Policy</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img src="images/abel-hero.png" alt="Abel Wabella Sugebo" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREDENTIALS BAR ===== -->
+<section class="credentials">
+  <div class="container">
+    <div class="cred-grid">
+      <div class="cred-item reveal">
+        <div class="cred-icon">&#127942;</div>
+        <div class="cred-label">CPJ Press Freedom Award</div>
+        <div class="cred-value">2015 International Laureate</div>
+      </div>
+      <div class="cred-item reveal">
+        <div class="cred-icon">&#127760;</div>
+        <div class="cred-label">TV5 Monde Prize</div>
+        <div class="cred-value">Citizen Journalism, 2015</div>
+      </div>
+      <div class="cred-item reveal">
+        <div class="cred-icon">&#9733;</div>
+        <div class="cred-label">Martin Ennals Award</div>
+        <div class="cred-value">Finalist, 2016</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="section-label">About</span>
+        <h2 class="section-title">From blogging collective to<br>fact-checking pioneer</h2>
+        <p>
+          I co-founded Zone Nine, Ethiopia's pioneering digital rights blogging collective, during the Arab Spring era, when social media held the promise of democratizing public discourse. That experience, including arrest and detention, gave me a firsthand education in the power and peril of digital information.
+        </p>
+        <p>
+          I went on to build Inform Africa and HaqCheck, Ethiopia's first IFCN-accredited fact-checking platform, growing it from a concept to a 40-person operation. Today, I focus on the intersection of AI safety, foreign information manipulation, and platform accountability across the Horn of Africa and beyond.
+        </p>
+        <p>
+          My work applies frameworks like DISARM to map influence operations, uses OSINT methodologies to track synthetic media threats, and develops policy recommendations that hold platforms and state actors accountable. I am currently based in the Washington, DC area.
+        </p>
+        <hr class="divider">
+        <ul class="expertise-list">
+          <li>Disinformation Analysis</li>
+          <li>AI Safety &amp; Governance</li>
+          <li>OSINT &amp; DISARM Framework</li>
+          <li>Trust &amp; Safety Operations</li>
+          <li>Influence Operations</li>
+          <li>Platform Accountability</li>
+          <li>Fact-Checking &amp; Verification</li>
+          <li>Digital Rights Advocacy</li>
+          <li>Content Moderation Policy</li>
+          <li>Media Development</li>
+        </ul>
+      </div>
+      <div class="about-sidebar reveal">
+        <div style="border-radius:8px;overflow:hidden;margin-bottom:1.75rem;border:1px solid var(--color-border);">
+          <img src="images/abel-about.jpg" alt="Abel Wabella Sugebo" style="width:100%;display:block;object-fit:cover;">
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Recognition</div>
+          <div class="sidebar-item"><strong>CPJ International Press Freedom Award</strong> (2015)</div>
+          <div class="sidebar-item"><strong>TV5 Monde Prize, Citizen Journalism</strong> (2015)</div>
+          <div class="sidebar-item"><strong>Martin Ennals Award Finalist</strong> (2016)</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Certifications</div>
+          <div class="sidebar-item"><strong>DISARM Analyst Course</strong> (2025)</div>
+          <div class="sidebar-item"><strong>IFCN Signatory</strong> (HaqCheck)</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Affiliations</div>
+          <div class="sidebar-item">Code for Africa</div>
+          <div class="sidebar-item">CIPESA (Researcher)</div>
+          <div class="sidebar-item">Free Press Unlimited</div>
+          <div class="sidebar-item">Access Now</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Languages</div>
+          <div class="sidebar-item"><strong>Amharic</strong> &mdash; Native</div>
+          <div class="sidebar-item"><strong>English</strong> &mdash; Professional</div>
+          <div class="sidebar-item"><strong>Afaan Oromo</strong> &mdash; Working</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CV/RESUME ===== -->
+<section class="cv" id="cv">
+  <div class="container">
+    <span class="section-label reveal">Resume</span>
+    <h2 class="section-title reveal">Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2021 &ndash; Present</div>
+        <div>
+          <div class="timeline-role">Executive Director &amp; Founder</div>
+          <div class="timeline-org">Inform Africa / HaqCheck</div>
+          <div class="timeline-desc">
+            Founded and led Ethiopia's first IFCN-accredited fact-checking platform. Built and managed a 40+ person team. Now relaunching as a U.S.-based nonprofit focused on AI safety, digital rights, and information integrity research.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2018 &ndash; 2024</div>
+        <div>
+          <div class="timeline-role">Managing Director</div>
+          <div class="timeline-org">Addis Zeybe</div>
+          <div class="timeline-desc">
+            Directed a digital media outlet covering Ethiopian politics, civil society, and technology. Produced investigative and analytical content across web, social, and video platforms.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2020 &ndash; 2022</div>
+        <div>
+          <div class="timeline-role">Consultant</div>
+          <div class="timeline-org">Free Press Unlimited</div>
+          <div class="timeline-desc">
+            Provided strategic consulting on media development, digital safety, and press freedom programming in the Horn of Africa region.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2020 &ndash; 2021</div>
+        <div>
+          <div class="timeline-role">Fact-Checker</div>
+          <div class="timeline-org">PesaCheck / Code for Africa</div>
+          <div class="timeline-desc">
+            Verified claims and produced fact-check reports as part of Africa's largest verification network, with a focus on the Ethiopian information environment.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2017 &ndash; 2018</div>
+        <div>
+          <div class="timeline-role">Editor</div>
+          <div class="timeline-org">Addis Fortune</div>
+          <div class="timeline-desc">
+            Edited news and analysis at one of Ethiopia's leading English-language business newspapers, covering economic policy, investment, and reform.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2011 &ndash; 2014</div>
+        <div>
+          <div class="timeline-role">Engineer</div>
+          <div class="timeline-org">Ethiopian Airlines</div>
+          <div class="timeline-desc">
+            Worked in mechanical engineering operations at Africa's largest airline. Transitioned from engineering to journalism and civic activism through the Zone Nine blogging collective.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cv-download reveal">
+      <a href="#" class="btn btn-primary" title="Download full CV">&#11015; Download Full CV (PDF)</a>
+      <a href="https://www.linkedin.com/in/abelwabella/" class="btn btn-outline" target="_blank" rel="noopener">View LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELECTED WORK ===== -->
+<section class="work" id="work">
+  <div class="container">
+    <span class="section-label reveal">Selected Work</span>
+    <h2 class="section-title reveal">Research, Reports &amp; Projects</h2>
+    <div class="work-grid">
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Research Report</div>
+        <h3 class="work-card-title">Red Sea Geopolitics &amp; Information Manipulation: A DISARM Analysis</h3>
+        <p class="work-card-desc">Mapped foreign information manipulation and interference (FIMI) campaigns across Red Sea conflict zones using the DISARM Framework, identifying tactics used by state-linked actors.</p>
+        <div class="work-card-meta">
+          <span>2025 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Training Module</div>
+        <h3 class="work-card-title">OSINT for Disinformation Analysts</h3>
+        <p class="work-card-desc">Developed an open-source intelligence training curriculum for African journalists and researchers, covering digital forensics, geolocation, and network analysis techniques.</p>
+        <div class="work-card-meta">
+          <span>2025 &bull; CIPESA / ADRF</span>
+          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Country Report</div>
+        <h3 class="work-card-title">State of Internet Freedom in Africa: Ethiopia</h3>
+        <p class="work-card-desc">Authored the Ethiopia chapter for CIPESA's continental assessment of digital rights, covering internet shutdowns, surveillance, and regulatory developments.</p>
+        <div class="work-card-meta">
+          <span>2025 &bull; CIPESA</span>
+          <a href="https://cipesa.org" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Policy Research</div>
+        <h3 class="work-card-title">Disinformation and Economic Reform in Ethiopia</h3>
+        <p class="work-card-desc">Analyzed how disinformation campaigns intersect with economic reform narratives, examining the impact on public trust and policy implementation.</p>
+        <div class="work-card-meta">
+          <span>2024 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Investigation</div>
+        <h3 class="work-card-title">War and Disinformation in Northern Ethiopia</h3>
+        <p class="work-card-desc">Documented the information warfare dimension of the Tigray conflict, tracking coordinated inauthentic behavior and state-sponsored narratives across platforms.</p>
+        <div class="work-card-meta">
+          <span>2022 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">DISARM Framework</div>
+        <h3 class="work-card-title">Disinformation Pathways &amp; Countermeasures</h3>
+        <p class="work-card-desc">Contributed case studies and methodology documentation to the DISARM Framework knowledge base, developing tools for structured analysis of influence operations.</p>
+        <div class="work-card-meta">
+          <span>2022 &bull; CIPESA / Data Knowledge Hub</span>
+          <a href="https://data-knowledge-hub.com" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEDIA & MENTIONS ===== -->
+<section class="media" id="media">
+  <div class="container">
+    <span class="section-label reveal">Press &amp; Citations</span>
+    <h2 class="section-title reveal">Media Mentions &amp; Research References</h2>
+    <p class="reveal" style="color:var(--color-text-muted);max-width:600px;margin-bottom:0.5rem;">Featured in international press, cited in academic and policy research, and referenced by organizations working on press freedom, digital rights, and information integrity.</p>
+    <div class="media-grid">
+
+      <div class="media-item reveal">
+        <div class="media-source">Committee to Protect Journalists</div>
+        <div class="media-title">2015 International Press Freedom Award: Abel Wabella</div>
+        <div class="media-excerpt">Recognized for courageous reporting and digital rights advocacy in Ethiopia as co-founder of the Zone Nine blogging collective.</div>
+      </div>
+
+      <div class="media-item reveal">
+        <div class="media-source">Martin Ennals Foundation</div>
+        <div class="media-title">2016 Martin Ennals Award Finalist</div>
+        <div class="media-excerpt">Named a finalist for one of the world's most prestigious human rights awards for work defending digital expression in Ethiopia.</div>
+      </div>
+
+      <div class="media-item reveal">
+        <div class="media-source">CIPESA</div>
+        <div class="media-title">State of Internet Freedom in Africa 2025</div>
+        <div class="media-excerpt">Ethiopia country researcher contributing analysis of internet shutdowns, surveillance, and digital rights regression.</div>
+      </div>
+
+      <div class="media-item reveal">
+        <div class="media-source">IREX / Access Now / Free Press Unlimited</div>
+        <div class="media-title">International Media Development Partnerships</div>
+        <div class="media-excerpt">Collaborated across multiple international organizations on press freedom, digital safety, and media resilience programming in the Horn of Africa.</div>
+      </div>
+
+      <div class="media-item reveal">
+        <div class="media-source">Data Knowledge Hub</div>
+        <div class="media-title">DISARM Framework Case Studies</div>
+        <div class="media-excerpt">Contributed structured case study documentation and methodology for analyzing disinformation campaigns using the DISARM standard.</div>
+      </div>
+
+      <div class="media-item reveal">
+        <div class="media-source">IFCN / Poynter Institute</div>
+        <div class="media-title">HaqCheck: IFCN Signatory</div>
+        <div class="media-excerpt">Led HaqCheck through IFCN accreditation, establishing Ethiopia's first internationally recognized fact-checking initiative.</div>
+      </div>
+
+    </div>
+    <p class="reveal" style="margin-top:2rem;">
+      <a href="#contact" style="font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.05em;">Have a media inquiry? Get in touch &rarr;</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== COLLABORATE ===== -->
+<section class="collaborate" id="collaborate">
+  <div class="container">
+    <span class="section-label reveal">Collaborate</span>
+    <h2 class="section-title reveal">Partnership &amp; Engagement</h2>
+    <div class="collab-grid">
+      <div class="collab-card reveal">
+        <div class="collab-icon">&#128269;</div>
+        <h3 class="collab-title">Research Collaboration</h3>
+        <p class="collab-desc">Joint investigations into influence operations, AI-generated disinformation, and platform accountability. Experienced with DISARM, OSINT, and FIMI analysis frameworks.</p>
+      </div>
+      <div class="collab-card reveal">
+        <div class="collab-icon">&#127891;</div>
+        <h3 class="collab-title">Speaking &amp; Training</h3>
+        <p class="collab-desc">Keynotes, panels, and workshops on disinformation, digital rights, AI safety, and fact-checking. Available for conferences, universities, and organizational briefings.</p>
+      </div>
+      <div class="collab-card reveal">
+        <div class="collab-icon">&#128220;</div>
+        <h3 class="collab-title">Consulting &amp; Advisory</h3>
+        <p class="collab-desc">Strategic advisory on trust and safety, content moderation policy, media development, and information integrity programming for organizations and platforms.</p>
+      </div>
+      <div class="collab-card reveal">
+        <div class="collab-icon">&#129309;</div>
+        <h3 class="collab-title">Media &amp; Press</h3>
+        <p class="collab-desc">Available for interviews, expert commentary, and op-ed collaborations on Horn of Africa information dynamics, AI governance, and platform policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-label reveal">Contact</span>
+    <h2 class="section-title reveal">Let's Connect</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>I'm open to new opportunities in trust and safety, influence operations analysis, AI governance, and digital policy. Whether you're a recruiter, researcher, journalist, or potential collaborator, I'd like to hear from you.</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-method-icon">&#9993;</div>
+            <a href="mailto:abel@informafrica.net">abel@informafrica.net</a>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-icon">&#128205;</div>
+            <span style="color:var(--color-text-muted);">Washington, DC Metro Area</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/abelwabella/" class="social-link" target="_blank" rel="noopener" title="LinkedIn">in</a>
+          <a href="https://twitter.com/aborisow" class="social-link" target="_blank" rel="noopener" title="X (Twitter)">&#120143;</a>
+          <a href="https://bsky.app/" class="social-link" target="_blank" rel="noopener" title="Bluesky">&#9729;</a>
+          <a href="https://www.youtube.com/@AddisZeybe" class="social-link" target="_blank" rel="noopener" title="YouTube">&#9654;</a>
+          <a href="https://www.tiktok.com/@haqcheck" class="social-link" target="_blank" rel="noopener" title="TikTok">&#9835;</a>
+        </div>
+      </div>
+      <div class="contact-form reveal" id="contactForm">
+        <div class="form-group">
+          <label class="form-label" for="formName">Name</label>
+          <input class="form-input" type="text" id="formName" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="formEmail">Email</label>
+          <input class="form-input" type="email" id="formEmail" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="formSubject">Subject</label>
+          <input class="form-input" type="text" id="formSubject" placeholder="How can I help?">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="formMessage">Message</label>
+          <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your project, opportunity, or inquiry..." required></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" style="align-self:flex-start;" onclick="handleFormSubmit()">Send Message</button>
+        <div id="formStatus" style="font-size:0.85rem;color:var(--color-accent);display:none;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-text">&copy; 2026 Abel Wabella Sugebo. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#cv">Resume</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Contact form handler (placeholder for Formspree/Netlify Forms integration)
+function handleFormSubmit() {
+  const name = document.getElementById('formName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const message = document.getElementById('formMessage').value.trim();
+  const status = document.getElementById('formStatus');
+
+  if (!name || !email || !message) {
+    status.style.display = 'block';
+    status.style.color = '#e06060';
+    status.textContent = 'Please fill in all required fields.';
+    return;
+  }
+
+  // INTEGRATION NOTE: Replace this with Formspree or Netlify Forms.
+  // For Formspree: Change the form to <form action="https://formspree.io/f/YOUR_ID" method="POST">
+  // For Netlify Forms: Add netlify attribute to a <form> tag and deploy on Netlify.
+  status.style.display = 'block';
+  status.style.color = 'var(--color-accent)';
+  status.textContent = 'Thank you! Your message has been received. I will get back to you soon.';
+  document.getElementById('formName').value = '';
+  document.getElementById('formEmail').value = '';
+  document.getElementById('formSubject').value = '';
+  document.getElementById('formMessage').value = '';
+}
+</script>
+</body>
+</html>
