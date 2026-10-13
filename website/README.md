@@ -35,6 +35,14 @@ Open `index.html` in any text editor. Search for the section you want to update:
 
 After editing, push to GitHub — Netlify auto-deploys.
 
+### Updating the CV
+
+The "Download Full CV (PDF)" button serves `Abel-Sugebo-CV.pdf` from this folder. To update it, upload a new PDF with exactly that file name (replacing the old one). No HTML change is needed.
+
+### Contact form
+
+The form posts to Formspree (form ID `mpqyyvno`), which emails each message to Abel. Submissions, spam filtering and the monthly limit are managed in the Formspree dashboard. If the form ID ever changes, update the `action` URL on the `<form id="contactForm">` tag in `index.html`.
+
 ## License
 
 © 2026 Abel Wabella Sugebo. All rights reserved.
