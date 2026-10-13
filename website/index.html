@@ -765,6 +765,22 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
 }
 .form-input:focus, .form-textarea:focus { border-color: var(--color-accent); }
 .form-textarea { resize: vertical; min-height: 120px; }
+.form-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form .btn[disabled] { opacity: 0.6; cursor: progress; }
+.form-status {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-border-accent);
+  background: var(--color-accent-glow);
+  color: var(--color-text);
+}
+.form-status.is-error {
+  border-color: rgba(224,96,96,0.45);
+  background: rgba(224,96,96,0.08);
+}
+.form-status a { color: var(--color-accent); text-decoration: underline; }
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
 }
@@ -877,13 +893,13 @@ footer {
       <div class="featured-content">
         <div class="featured-label">Latest Article &bull; Inform Africa</div>
         <h2 class="featured-title">
-          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" target="_blank" rel="noopener">When AI Moderation Becomes a Weapon: Ethiopia's Mass Reporting Crisis</a>
+          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" target="_blank" rel="noopener">False in 2021, Asserted in 2026: Eritrean Troops and the Politics of Verification</a>
         </h2>
-        <p class="featured-desc">Coordinated mass-reporting campaigns in Ethiopia are exploiting AI-driven platform moderation systems to silence creators and distort the digital public sphere. The article calls for stronger safeguards, local-language and local-context expertise, and greater platform transparency.</p>
+        <p class="featured-desc">A verification analysis examining how Ethiopia denied Eritrean troop presence in Tigray in 2021 then asserted it in 2026. Analyzing 41 X posts, 28 Facebook posts, and 35 YouTube videos, the piece calls on platforms to treat conflict-party statements as claims requiring verification, not as authoritative sources.</p>
         <div class="featured-meta">
-          <span class="featured-meta-item">March 15, 2026</span>
+          <span class="featured-meta-item">October 8, 2026</span>
           <span class="featured-meta-item">Inform Africa</span>
-          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="featured-read-link" target="_blank" rel="noopener">Read the article &rarr;</a>
+          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="featured-read-link" target="_blank" rel="noopener">Read the article &rarr;</a>
         </div>
       </div>
     </div>
@@ -1035,6 +1051,36 @@ footer {
     <div class="work-grid">
 
       <div class="work-card reveal">
+        <div class="work-card-type">Verification / OSINT</div>
+        <h3 class="work-card-title">False in 2021, Asserted in 2026: Eritrean Troops and the Politics of Verification</h3>
+        <p class="work-card-desc">Examined how Ethiopia denied Eritrean troop presence in 2021 then asserted it in 2026, analyzing 41 X posts, 28 Facebook posts, and 35 YouTube videos to expose the politics of verification in conflict narratives.</p>
+        <div class="work-card-meta">
+          <span>Oct 2026 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Country Report</div>
+        <h3 class="work-card-title">State of Internet Freedom in Africa 2026: Ethiopia</h3>
+        <p class="work-card-desc">Authored the Ethiopia chapter for CIPESA's 2026 continental report on internet freedom, examining digital public infrastructure (DPI) and digital rights. Launched at FIFAfrica26 in Mauritius, covering 11 African countries.</p>
+        <div class="work-card-meta">
+          <span>Oct 2026 &bull; CIPESA</span>
+          <a href="https://cipesa.org/2026/10/state-of-internet-freedom-in-africa-2026-report-launched-at-fifafrica26/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-card-type">Investigation</div>
+        <h3 class="work-card-title">When AI Moderation Becomes a Weapon: Ethiopia's Mass Reporting Crisis</h3>
+        <p class="work-card-desc">Investigated coordinated mass-reporting campaigns in Ethiopia exploiting AI-driven platform moderation to silence creators. Prompted an <a href="https://www.business-humanrights.org/en/latest-news/tiktoks-response-4/" target="_blank" rel="noopener" style="color:var(--color-accent);">official response from TikTok</a> via the Business &amp; Human Rights Resource Centre.</p>
+        <div class="work-card-meta">
+          <span>Mar 2026 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
         <div class="work-card-type">Research Report</div>
         <h3 class="work-card-title">Red Sea Geopolitics &amp; Information Manipulation: A DISARM Analysis</h3>
         <p class="work-card-desc">Mapped foreign information manipulation and interference (FIMI) campaigns across Red Sea conflict zones using the DISARM Framework, identifying tactics used by state-linked actors.</p>
@@ -1056,8 +1102,8 @@ footer {
 
       <div class="work-card reveal">
         <div class="work-card-type">Country Report</div>
-        <h3 class="work-card-title">State of Internet Freedom in Africa: Ethiopia</h3>
-        <p class="work-card-desc">Authored the Ethiopia chapter for CIPESA's continental assessment of digital rights, covering internet shutdowns, surveillance, and regulatory developments.</p>
+        <h3 class="work-card-title">State of Internet Freedom in Africa 2025: Ethiopia</h3>
+        <p class="work-card-desc">Authored the Ethiopia chapter for CIPESA's 2025 continental assessment of digital rights, covering internet shutdowns, surveillance, and regulatory developments.</p>
         <div class="work-card-meta">
           <span>2025 &bull; CIPESA</span>
           <a href="https://cipesa.org" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
@@ -1105,6 +1151,12 @@ footer {
     <h2 class="section-title reveal">Media Mentions &amp; Research References</h2>
     <p class="reveal" style="color:var(--color-text-muted);max-width:600px;margin-bottom:0.5rem;">Featured in international press, cited in academic and policy research, and referenced by organizations working on press freedom, digital rights, and information integrity.</p>
     <div class="media-grid">
+
+      <div class="media-item reveal">
+        <div class="media-source">Business &amp; Human Rights Resource Centre</div>
+        <div class="media-title"><a href="https://www.business-humanrights.org/en/latest-news/tiktoks-response-4/" target="_blank" rel="noopener" style="color:var(--color-text);">TikTok's Official Response to Ethiopia Mass Reporting Investigation</a></div>
+        <div class="media-excerpt">TikTok issued a formal response to Abel's Inform Africa investigation on weaponized content moderation in Ethiopia, published by the Business &amp; Human Rights Resource Centre.</div>
+      </div>
 
       <div class="media-item reveal">
         <div class="media-source">Committee to Protect Journalists</div>
@@ -1190,7 +1242,7 @@ footer {
         <div class="contact-methods">
           <div class="contact-method">
             <div class="contact-method-icon">&#9993;</div>
-            <a href="mailto:abel@informafrica.net">abelwabella@gmail.com</a>
+            <a href="mailto:abelwabella@gmail.com">abelwabella@gmail.com</a>
           </div>
           <div class="contact-method">
             <div class="contact-method-icon">&#128205;</div>
@@ -1205,26 +1257,34 @@ footer {
           <a href="https://www.tiktok.com/@haqcheck" class="social-link" target="_blank" rel="noopener" title="TikTok">&#9835;</a>
         </div>
       </div>
-      <div class="contact-form reveal" id="contactForm">
+      <!-- Contact form: posts to Formspree (https://formspree.io/f/mpqyyvno), which emails each message to Abel.
+           The script at the bottom of the page sends it in the background and shows the result here;
+           without JavaScript the form still posts normally. -->
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mpqyyvno" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" id="formMailSubject" value="New message from abelsugebo.com">
+        <div class="form-hp" aria-hidden="true">
+          <label for="formGotcha">Leave this field empty</label>
+          <input type="text" name="_gotcha" id="formGotcha" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-group">
           <label class="form-label" for="formName">Name</label>
-          <input class="form-input" type="text" id="formName" placeholder="Your name" required>
+          <input class="form-input" type="text" name="name" id="formName" placeholder="Your name" autocomplete="name" maxlength="120" required>
         </div>
         <div class="form-group">
           <label class="form-label" for="formEmail">Email</label>
-          <input class="form-input" type="email" id="formEmail" placeholder="you@example.com" required>
+          <input class="form-input" type="email" name="email" id="formEmail" placeholder="you@example.com" autocomplete="email" maxlength="200" required>
         </div>
         <div class="form-group">
           <label class="form-label" for="formSubject">Subject</label>
-          <input class="form-input" type="text" id="formSubject" placeholder="How can I help?">
+          <input class="form-input" type="text" name="subject" id="formSubject" placeholder="How can I help?" maxlength="200">
         </div>
         <div class="form-group">
           <label class="form-label" for="formMessage">Message</label>
-          <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your project, opportunity, or inquiry..." required></textarea>
+          <textarea class="form-textarea" name="message" id="formMessage" placeholder="Tell me about your project, opportunity, or inquiry..." maxlength="5000" required></textarea>
         </div>
-        <button type="button" class="btn btn-primary" style="align-self:flex-start;" onclick="handleFormSubmit()">Send Message</button>
-        <div id="formStatus" style="font-size:0.85rem;color:var(--color-accent);display:none;"></div>
-      </div>
+        <button type="submit" class="btn btn-primary" id="formSubmit" style="align-self:flex-start;">Send Message</button>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
     </div>
   </div>
 </section>
@@ -1279,31 +1339,72 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => observer.observe(el));
 
-// Contact form handler (placeholder for Formspree/Netlify Forms integration)
-function handleFormSubmit() {
-  const name = document.getElementById('formName').value.trim();
-  const email = document.getElementById('formEmail').value.trim();
-  const message = document.getElementById('formMessage').value.trim();
+// Contact form: sends the message to Formspree in the background and shows the result inline.
+// If Formspree asks for a spam check, the form falls back to a normal post so the visitor can complete it there.
+(function () {
+  const form = document.getElementById('contactForm');
+  if (!form || !window.fetch || !window.FormData) return;
+  const button = document.getElementById('formSubmit');
   const status = document.getElementById('formStatus');
+  const mailSubject = document.getElementById('formMailSubject');
+  const directEmail = 'abelwabella@gmail.com';
+  const emailLink = '<a href="mailto:' + directEmail + '">' + directEmail + '</a>';
 
-  if (!name || !email || !message) {
-    status.style.display = 'block';
-    status.style.color = '#e06060';
-    status.textContent = 'Please fill in all required fields.';
-    return;
+  function escapeHtml(text) {
+    return String(text).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
   }
 
-  // INTEGRATION NOTE: Replace this with Formspree or Netlify Forms.
-  // For Formspree: Change the form to <form action="https://formspree.io/f/YOUR_ID" method="POST">
-  // For Netlify Forms: Add netlify attribute to a <form> tag and deploy on Netlify.
-  status.style.display = 'block';
-  status.style.color = 'var(--color-accent)';
-  status.textContent = 'Thank you! Your message has been received. I will get back to you soon.';
-  document.getElementById('formName').value = '';
-  document.getElementById('formEmail').value = '';
-  document.getElementById('formSubject').value = '';
-  document.getElementById('formMessage').value = '';
-}
+  function showStatus(html, isError) {
+    status.innerHTML = html;
+    status.classList.toggle('is-error', Boolean(isError));
+    status.hidden = false;
+  }
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const name = form.elements.name.value.trim();
+    const subject = form.elements.subject.value.trim();
+    mailSubject.value = 'Website contact: ' + (subject || 'New message') + (name ? ' (from ' + name + ')' : '');
+
+    const label = button.textContent;
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.hidden = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.reset();
+        showStatus('Thank you, your message has been sent. I will get back to you soon.', false);
+        return;
+      }
+      let data = {};
+      try { data = await response.json(); } catch (ignored) { /* non-JSON error page */ }
+      const errors = Array.isArray(data.errors) ? data.errors : [];
+      const needsCaptcha = errors.some(function (err) {
+        return /captcha/i.test((err.code || '') + ' ' + (err.message || ''));
+      });
+      if (needsCaptcha) {
+        form.submit();
+        return;
+      }
+      const detail = errors.map(function (err) { return err.message; }).filter(Boolean).join(' ') || data.error || '';
+      showStatus('Sorry, your message could not be sent' + (detail ? ' (' + escapeHtml(detail) + ')' : '') +
+        '. Please try again, or email me directly at ' + emailLink + '.', true);
+    } catch (networkError) {
+      showStatus('Your message could not be sent because the connection failed. Please try again, or email me directly at ' + emailLink + '.', true);
+    } finally {
+      button.disabled = false;
+      button.textContent = label;
+    }
+  });
+})();
 </script>
 </body>
 </html>
