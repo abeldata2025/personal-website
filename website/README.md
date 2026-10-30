@@ -43,6 +43,11 @@ The "Download Full CV (PDF)" button serves `Abel-Sugebo-CV.pdf` from this folder
 
 The form posts to Formspree (form ID `mpqyyvno`), which emails each message to Abel. Submissions, spam filtering and the monthly limit are managed in the Formspree dashboard. If the form ID ever changes, update the `action` URL on the `<form id="contactForm">` tag in `index.html`.
 
+## Version history
+
+- **Current version (October 30, 2026):** repositioned for U.S. trust and safety, OSINT, and AI safety roles.
+- **Previous version (October 13, 2026 and earlier):** preserved unchanged on the `archive/original-site` branch. Open that branch on GitHub to browse or download it.
+
 ## License
 
 © 2026 Abel Wabella Sugebo. All rights reserved.
