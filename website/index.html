@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abel Wabella Sugebo — Media Integrity & AI Governance Expert</title>
-<meta name="description" content="Abel Wabella Sugebo is a media integrity researcher, AI governance expert, and founder of Inform Africa/HaqCheck. Based in Washington, DC.">
-<meta name="keywords" content="Abel Sugebo, disinformation, AI safety, media integrity, fact-checking, HaqCheck, Inform Africa, digital policy, OSINT, trust and safety">
-<meta property="og:title" content="Abel Wabella Sugebo — Media Integrity & AI Governance Expert">
-<meta property="og:description" content="Researcher, founder, and advocate working at the intersection of AI safety, information integrity, and platform accountability.">
+<title>Abel Wabella Sugebo | Trust &amp; Safety, OSINT and Information Integrity</title>
+<meta name="description" content="Abel Wabella Sugebo investigates disinformation, influence operations, and platform abuse using OSINT. Former principal contact for Inform Africa in Meta's Trusted Partner program. Based in Washington, DC.">
+<meta name="keywords" content="Abel Sugebo, trust and safety, OSINT, influence operations, disinformation, platform abuse, information integrity, DISARM, AI safety, HaqCheck, Inform Africa">
+<meta property="og:title" content="Abel Wabella Sugebo | Trust &amp; Safety, OSINT and Information Integrity">
+<meta property="og:description" content="Investigating disinformation, influence operations, and platform abuse with OSINT. Based in Washington, DC.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -454,6 +454,41 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
   .featured-meta { justify-content: center; }
 }
 
+/* ===== FEATURED INVESTIGATIONS ===== */
+.investigations { padding: var(--section-pad) 0; }
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.case-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-accent);
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.case-card:hover { border-color: var(--color-accent); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+.case-facts { margin: 0.25rem 0 1.25rem; flex-grow: 1; }
+.case-facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-top: 0.9rem;
+}
+.case-facts dd {
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-top: 0.2rem;
+}
+.case-card .work-card-meta { gap: 1rem; }
+
 /* ===== ABOUT ===== */
 .about { padding: var(--section-pad) 0; }
 .about-grid {
@@ -669,6 +704,7 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
   transition: border-color 0.2s;
 }
 .collab-card:hover { border-color: var(--color-border-accent); }
+.collab-card--primary { border-color: var(--color-border-accent); }
 .collab-icon {
   width: 48px; height: 48px;
   margin: 0 auto 1rem;
@@ -819,11 +855,10 @@ footer {
       <span></span><span></span><span></span>
     </button>
     <div class="nav-links" id="navLinks">
+      <a href="#investigations">Investigations</a>
       <a href="#about">About</a>
-      <a href="#cv">Resume</a>
-      <a href="#work">Work</a>
-      <a href="#media">Media</a>
-      <a href="#collaborate">Collaborate</a>
+      <a href="#cv">Experience</a>
+      <a href="#work">Research</a>
       <a href="#contact" class="nav-cta">Get in Touch</a>
     </div>
   </div>
@@ -834,20 +869,20 @@ footer {
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="hero-eyebrow">Media Integrity &bull; AI Governance &bull; Digital Rights</span>
-        <h1 class="hero-title">Defending the<br><em>integrity of information</em><br>in the age of AI</h1>
+        <span class="hero-eyebrow">Information Integrity &bull; Trust &amp; Safety &bull; OSINT</span>
+        <h1 class="hero-title">Investigating<br><em>influence operations</em><br>and platform abuse</h1>
         <p class="hero-subtitle">
-          I'm Abel Wabella Sugebo, a researcher and practitioner working at the intersection of disinformation analysis, AI safety, and platform accountability. Founder of Inform Africa and Ethiopia's first IFCN-accredited fact-checking initiative.
+          I'm Abel Wabella Sugebo, an information-integrity and OSINT researcher based in Washington, DC. I served as Inform Africa's principal contact in Meta's Trusted Partner program, preparing and tracking content, account, and imminent-harm escalations for Ethiopia and the Horn of Africa.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Work With Me</a>
-          <a href="#work" class="btn btn-outline">View Selected Work</a>
+          <a href="#investigations" class="btn btn-primary">View Investigations</a>
+          <a href="#cv" class="btn btn-outline">View Experience</a>
         </div>
         <div class="hero-badges">
           <span class="badge">OSINT &amp; DISARM</span>
           <span class="badge">Trust &amp; Safety</span>
-          <span class="badge">AI Governance</span>
-          <span class="badge">Platform Policy</span>
+          <span class="badge">Influence Operations</span>
+          <span class="badge">AI Safety</span>
         </div>
       </div>
       <div class="hero-photo">
@@ -864,44 +899,82 @@ footer {
   <div class="container">
     <div class="cred-grid">
       <div class="cred-item reveal">
-        <div class="cred-icon">&#127942;</div>
-        <div class="cred-label">CPJ Press Freedom Award</div>
-        <div class="cred-value">2015 International Laureate</div>
-      </div>
-      <div class="cred-item reveal">
-        <div class="cred-icon">&#127760;</div>
-        <div class="cred-label">TV5 Monde Prize</div>
-        <div class="cred-value">Citizen Journalism, 2015</div>
+        <div class="cred-icon">&#128737;</div>
+        <div class="cred-label">Meta Trusted Partner Program</div>
+        <div class="cred-value">Principal contact, Inform Africa</div>
       </div>
       <div class="cred-item reveal">
         <div class="cred-icon">&#9733;</div>
-        <div class="cred-label">Martin Ennals Award</div>
-        <div class="cred-value">Finalist, 2016</div>
+        <div class="cred-label">IFCN Verified Signatory</div>
+        <div class="cred-value">HaqCheck, Ethiopia's first</div>
+      </div>
+      <div class="cred-item reveal">
+        <div class="cred-icon">&#128269;</div>
+        <div class="cred-label">DISARM Framework</div>
+        <div class="cred-value">Certified analyst</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FEATURED ARTICLE ===== -->
-<section class="featured">
+<!-- ===== FEATURED INVESTIGATIONS ===== -->
+<section class="investigations" id="investigations">
   <div class="container">
-    <div class="featured-inner reveal">
-      <div class="featured-badge-col">
-        <span class="featured-new-badge">New</span>
-        <div class="featured-icon">&#128221;</div>
-      </div>
-      <div class="featured-content">
-        <div class="featured-label">Latest Article &bull; Inform Africa</div>
-        <h2 class="featured-title">
-          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" target="_blank" rel="noopener">False in 2021, Asserted in 2026: Eritrean Troops and the Politics of Verification</a>
-        </h2>
-        <p class="featured-desc">A verification analysis examining how Ethiopia denied Eritrean troop presence in Tigray in 2021 then asserted it in 2026. Analyzing 41 X posts, 28 Facebook posts, and 35 YouTube videos, the piece calls on platforms to treat conflict-party statements as claims requiring verification, not as authoritative sources.</p>
-        <div class="featured-meta">
-          <span class="featured-meta-item">October 8, 2026</span>
-          <span class="featured-meta-item">Inform Africa</span>
-          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="featured-read-link" target="_blank" rel="noopener">Read the article &rarr;</a>
+    <span class="section-label reveal">Featured Investigations</span>
+    <h2 class="section-title reveal">Three cases that show how I work</h2>
+    <div class="case-grid">
+
+      <article class="case-card reveal">
+        <div class="work-card-type">Trust &amp; Safety &bull; Platform Abuse</div>
+        <h3 class="work-card-title">When AI Moderation Becomes a Weapon: Ethiopia's Mass Reporting Crisis</h3>
+        <dl class="case-facts">
+          <dt>Question</dt>
+          <dd>Why were Ethiopian TikTok accounts with no prior violations suddenly hit by cascading enforcement?</dd>
+          <dt>Evidence</dt>
+          <dd>Creator reports of suspensions, shadowbans, and removals, including the case of Ethiopia's most-followed TikTok creator.</dd>
+          <dt>Takeaway</dt>
+          <dd>Coordinated mass reporting can exploit automated moderation in low-resource languages such as Amharic and Tigrigna. Claims of a "Reporting-as-a-Service" market are flagged as requiring verification.</dd>
+        </dl>
+        <div class="work-card-meta">
+          <span>Mar 2026 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
         </div>
-      </div>
+      </article>
+
+      <article class="case-card reveal">
+        <div class="work-card-type">OSINT &bull; Cross-Platform Verification</div>
+        <h3 class="work-card-title">False in 2021, Asserted in 2026: Eritrean Troops and the Politics of Verification</h3>
+        <dl class="case-facts">
+          <dt>Question</dt>
+          <dd>How should verification handle a government that denied Eritrean troop presence in Tigray in 2021 and asserted it in 2026?</dd>
+          <dt>Evidence</dt>
+          <dd>A purposive sample of 104 items: 41 X posts, 28 Facebook posts, and 35 YouTube videos.</dd>
+          <dt>Takeaway</dt>
+          <dd>Platforms should treat conflict-party statements as claims requiring verification, not as authoritative sources.</dd>
+        </dl>
+        <div class="work-card-meta">
+          <span>Oct 2026 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+        </div>
+      </article>
+
+      <article class="case-card reveal">
+        <div class="work-card-type">Influence Operations &bull; AI-Enabled Threats</div>
+        <h3 class="work-card-title">DISARM Case Study: AI-Generated Propaganda Linking GERD Pride to "Assab" Sea-Access Narratives</h3>
+        <dl class="case-facts">
+          <dt>Question</dt>
+          <dd>How was AI-generated content used to tie pride in the Grand Ethiopian Renaissance Dam to calls for Red Sea access via Eritrea's Assab port?</dd>
+          <dt>Evidence</dt>
+          <dd>A cluster of online posts, documented and mapped to DISARM tactics and techniques.</dd>
+          <dt>Takeaway</dt>
+          <dd>Mapping AI-enabled activity to a shared framework makes it comparable across cases and analysts.</dd>
+        </dl>
+        <div class="work-card-meta">
+          <span>Dec 2025 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/wp-content/uploads/2025/12/Disarm-Case-Study_-AI-Generated-Propaganda-Linking-GERD-Pride-To-_Assab_Sea-Access_-Narratives_final_inform_africa.pdf" class="work-card-link" target="_blank" rel="noopener">Read (PDF) &rarr;</a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -912,28 +985,31 @@ footer {
     <div class="about-grid">
       <div class="about-text reveal">
         <span class="section-label">About</span>
-        <h2 class="section-title">From blogging collective to<br>fact-checking pioneer</h2>
+        <h2 class="section-title">From evidence<br>to escalation</h2>
         <p>
-          I co-founded Zone Nine, Ethiopia's pioneering digital rights blogging collective, during the Arab Spring era, when social media held the promise of democratizing public discourse. That experience, including arrest and detention, gave me a firsthand education in the power and peril of digital information.
+          I investigate disinformation, coordinated information manipulation, platform abuse, and influence operations. My work combines open-source intelligence (OSINT), digital evidence verification, and analytical reporting, with a growing focus on AI safety and safeguards.
         </p>
         <p>
-          I went on to build Inform Africa and HaqCheck, Ethiopia's first IFCN-accredited fact-checking platform, growing it from a concept to a 40-person operation. Today, I focus on the intersection of AI safety, foreign information manipulation, and platform accountability across the Horn of Africa and beyond.
+          From 2021 to 2025 I led Inform Africa and its fact-checking initiative, HaqCheck, Ethiopia's first IFCN Verified Signatory. I personally conducted investigations, triaged claims by urgency and potential harm, reviewed graphic material from the war in Tigray, and served as Inform Africa's principal contact in Meta's Trusted Partner program, preparing and tracking content, account, and imminent-harm escalations.
         </p>
         <p>
-          My work applies frameworks like DISARM to map influence operations, uses OSINT methodologies to track synthetic media threats, and develops policy recommendations that hold platforms and state actors accountable. I am currently based in the Washington, DC area.
+          Since relocating to the Washington, DC area in 2025, I have continued independent research and publication. I am now pursuing a long-term career on U.S. trust and safety, threat-intelligence, and AI safeguards teams, contributing directly to investigative and analytical work.
+        </p>
+        <p>
+          My path into this work began with Zone Nine, the digital rights blogging collective I co-founded in Ethiopia, and continued through newsroom leadership at Addis Zeybe.
         </p>
         <hr class="divider">
         <ul class="expertise-list">
+          <li>OSINT Investigations</li>
+          <li>Influence Operations (DISARM)</li>
+          <li>Platform Abuse &amp; Escalations</li>
+          <li>Coordinated Inauthentic Behavior</li>
+          <li>Digital Evidence Verification</li>
+          <li>Harm-Based Triage</li>
           <li>Disinformation Analysis</li>
-          <li>AI Safety &amp; Governance</li>
-          <li>OSINT &amp; DISARM Framework</li>
-          <li>Trust &amp; Safety Operations</li>
-          <li>Influence Operations</li>
-          <li>Platform Accountability</li>
-          <li>Fact-Checking &amp; Verification</li>
-          <li>Digital Rights Advocacy</li>
-          <li>Content Moderation Policy</li>
-          <li>Media Development</li>
+          <li>AI-Enabled Manipulation</li>
+          <li>Fact-Checking Standards</li>
+          <li>Graphic Content Review</li>
         </ul>
       </div>
       <div class="about-sidebar reveal">
@@ -947,12 +1023,11 @@ footer {
           <div class="sidebar-item"><strong>Martin Ennals Award Finalist</strong> (2016)</div>
         </div>
         <div class="sidebar-section">
-          <div class="sidebar-title">Certifications</div>
-          <div class="sidebar-item"><strong>DISARM Analyst Course</strong> (2025)</div>
-          <div class="sidebar-item"><strong>IFCN Signatory</strong> (HaqCheck)</div>
+          <div class="sidebar-title">Certification</div>
+          <div class="sidebar-item"><strong>Certified DISARM Analyst</strong> (2025)</div>
         </div>
         <div class="sidebar-section">
-          <div class="sidebar-title">Affiliations</div>
+          <div class="sidebar-title">Worked With</div>
           <div class="sidebar-item">Code for Africa</div>
           <div class="sidebar-item">CIPESA (Researcher)</div>
           <div class="sidebar-item">Free Press Unlimited</div>
@@ -960,9 +1035,8 @@ footer {
         </div>
         <div class="sidebar-section">
           <div class="sidebar-title">Languages</div>
-          <div class="sidebar-item"><strong>Amharic</strong> &mdash; Native</div>
-          <div class="sidebar-item"><strong>English</strong> &mdash; Professional</div>
-          <div class="sidebar-item"><strong>Afaan Oromo</strong> &mdash; Working</div>
+          <div class="sidebar-item"><strong>Amharic</strong> &middot; Native</div>
+          <div class="sidebar-item"><strong>English</strong> &middot; Professional</div>
         </div>
       </div>
     </div>
@@ -972,36 +1046,56 @@ footer {
 <!-- ===== CV/RESUME ===== -->
 <section class="cv" id="cv">
   <div class="container">
-    <span class="section-label reveal">Resume</span>
+    <span class="section-label reveal">Experience</span>
     <h2 class="section-title reveal">Professional Experience</h2>
     <div class="timeline">
       <div class="timeline-item reveal">
-        <div class="timeline-dates">2021 &ndash; Present</div>
+        <div class="timeline-dates">Jul 2025 &ndash; Present</div>
         <div>
-          <div class="timeline-role">Executive Director &amp; Founder</div>
+          <div class="timeline-role">Researcher, Information Integrity &amp; OSINT</div>
+          <div class="timeline-org">Independent (self-employed)</div>
+          <div class="timeline-desc">
+            Conduct OSINT investigations into influence operations and platform abuse in Ethiopia and the Horn of Africa and publish them through Inform Africa; maintain HaqCheck's IFCN Verified Signatory status. Recent work includes the March 2026 mass-reporting investigation, an October 2026 cross-platform assessment of 104 posts and videos, and a DISARM case study of AI-generated propaganda.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">2025 &ndash; 2026</div>
+        <div>
+          <div class="timeline-role">Ethiopia Country Researcher, State of Internet Freedom in Africa</div>
+          <div class="timeline-org">CIPESA (contract)</div>
+          <div class="timeline-desc">
+            Authored the Ethiopia country chapter for the 2025 and 2026 editions, covering surveillance, platform regulation, network shutdowns, and restrictions on digital expression.
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dates">Feb 2021 &ndash; Jul 2025</div>
+        <div>
+          <div class="timeline-role">Lead Researcher &amp; Investigator | Founder</div>
           <div class="timeline-org">Inform Africa / HaqCheck</div>
           <div class="timeline-desc">
-            Founded and led Ethiopia's first IFCN-accredited fact-checking platform. Built and managed a 40+ person team. Now relaunching as a U.S.-based nonprofit focused on AI safety, digital rights, and information integrity research.
+            Founded Inform Africa and served as its Executive Director while personally leading investigations, research, and platform escalations. Principal contact in Meta's Trusted Partner program for content, account, and imminent-harm escalations concerning Ethiopia and the Horn of Africa. Built HaqCheck into Ethiopia's first IFCN Verified Signatory and managed a team of up to 15 researchers, editors, and verification staff through armed conflict and repeated internet shutdowns. Regular operations concluded in July 2025 following my relocation to the United States.
           </div>
         </div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dates">2018 &ndash; 2024</div>
         <div>
-          <div class="timeline-role">Managing Director</div>
+          <div class="timeline-role">Co-Founder &amp; Managing Director</div>
           <div class="timeline-org">Addis Zeybe</div>
           <div class="timeline-desc">
-            Directed a digital media outlet covering Ethiopian politics, civil society, and technology. Produced investigative and analytical content across web, social, and video platforms.
+            Led an independent digital news organization of approximately 30 staff across editorial, operations, and strategy. Set verification and sourcing standards across the newsroom and directed conflict-period coverage of disinformation and platform manipulation. Concurrent with Inform Africa from 2021.
           </div>
         </div>
       </div>
       <div class="timeline-item reveal">
         <div class="timeline-dates">2020 &ndash; 2022</div>
         <div>
-          <div class="timeline-role">Consultant</div>
+          <div class="timeline-role">Consultant, Media Resilience &amp; Digital Safety</div>
           <div class="timeline-org">Free Press Unlimited</div>
           <div class="timeline-desc">
-            Provided strategic consulting on media development, digital safety, and press freedom programming in the Horn of Africa region.
+            Advised on media resilience, information integrity, and digital safety programming for newsrooms and civil society organizations in high-risk environments.
           </div>
         </div>
       </div>
@@ -1009,9 +1103,9 @@ footer {
         <div class="timeline-dates">2020 &ndash; 2021</div>
         <div>
           <div class="timeline-role">Fact-Checker</div>
-          <div class="timeline-org">PesaCheck / Code for Africa</div>
+          <div class="timeline-org">PesaCheck (Code for Africa), contract</div>
           <div class="timeline-desc">
-            Verified claims and produced fact-check reports as part of Africa's largest verification network, with a focus on the Ethiopian information environment.
+            Investigated and debunked viral misinformation across East African information ecosystems using reverse image analysis, geolocation, and account-network mapping.
           </div>
         </div>
       </div>
@@ -1028,10 +1122,10 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dates">2011 &ndash; 2014</div>
         <div>
-          <div class="timeline-role">Engineer</div>
+          <div class="timeline-role">Mechanical Engineer</div>
           <div class="timeline-org">Ethiopian Airlines</div>
           <div class="timeline-desc">
-            Worked in mechanical engineering operations at Africa's largest airline. Transitioned from engineering to journalism and civic activism through the Zone Nine blogging collective.
+            Technical systems and maintenance engineering in a safety-critical operating environment, before moving into journalism through Zone Nine.
           </div>
         </div>
       </div>
@@ -1046,19 +1140,9 @@ footer {
 <!-- ===== SELECTED WORK ===== -->
 <section class="work" id="work">
   <div class="container">
-    <span class="section-label reveal">Selected Work</span>
-    <h2 class="section-title reveal">Research, Reports &amp; Projects</h2>
+    <span class="section-label reveal">More Research</span>
+    <h2 class="section-title reveal">Reports &amp; Publications</h2>
     <div class="work-grid">
-
-      <div class="work-card reveal">
-        <div class="work-card-type">Verification / OSINT</div>
-        <h3 class="work-card-title">False in 2021, Asserted in 2026: Eritrean Troops and the Politics of Verification</h3>
-        <p class="work-card-desc">Examined how Ethiopia denied Eritrean troop presence in 2021 then asserted it in 2026, analyzing 41 X posts, 28 Facebook posts, and 35 YouTube videos to expose the politics of verification in conflict narratives.</p>
-        <div class="work-card-meta">
-          <span>Oct 2026 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
-        </div>
-      </div>
 
       <div class="work-card reveal">
         <div class="work-card-type">Country Report</div>
@@ -1071,31 +1155,11 @@ footer {
       </div>
 
       <div class="work-card reveal">
-        <div class="work-card-type">Investigation</div>
-        <h3 class="work-card-title">When AI Moderation Becomes a Weapon: Ethiopia's Mass Reporting Crisis</h3>
-        <p class="work-card-desc">Investigated coordinated mass-reporting campaigns in Ethiopia exploiting AI-driven platform moderation to silence creators. Prompted an <a href="https://www.business-humanrights.org/en/latest-news/tiktoks-response-4/" target="_blank" rel="noopener" style="color:var(--color-accent);">official response from TikTok</a> via the Business &amp; Human Rights Resource Centre.</p>
-        <div class="work-card-meta">
-          <span>Mar 2026 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
-        </div>
-      </div>
-
-      <div class="work-card reveal">
-        <div class="work-card-type">Research Report</div>
-        <h3 class="work-card-title">Red Sea Geopolitics &amp; Information Manipulation: A DISARM Analysis</h3>
-        <p class="work-card-desc">Mapped foreign information manipulation and interference (FIMI) campaigns across Red Sea conflict zones using the DISARM Framework, identifying tactics used by state-linked actors.</p>
-        <div class="work-card-meta">
-          <span>2025 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
-        </div>
-      </div>
-
-      <div class="work-card reveal">
         <div class="work-card-type">Training Module</div>
-        <h3 class="work-card-title">OSINT for Disinformation Analysts</h3>
-        <p class="work-card-desc">Developed an open-source intelligence training curriculum for African journalists and researchers, covering digital forensics, geolocation, and network analysis techniques.</p>
+        <h3 class="work-card-title">Comprehensive Training Module for Advanced Fact-Checking Using OSINT Technologies</h3>
+        <p class="work-card-desc">Training curriculum on advanced fact-checking with OSINT tools for journalists and researchers, covering verification, geolocation, and network analysis.</p>
         <div class="work-card-meta">
-          <span>2025 &bull; CIPESA / ADRF</span>
+          <span>Dec 2025 &bull; Inform Africa</span>
           <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
         </div>
       </div>
@@ -1115,27 +1179,27 @@ footer {
         <h3 class="work-card-title">Disinformation and Economic Reform in Ethiopia</h3>
         <p class="work-card-desc">Analyzed how disinformation campaigns intersect with economic reform narratives, examining the impact on public trust and policy implementation.</p>
         <div class="work-card-meta">
-          <span>2024 &bull; Inform Africa</span>
+          <span>Dec 2024 &bull; Inform Africa</span>
           <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
         </div>
       </div>
 
       <div class="work-card reveal">
-        <div class="work-card-type">Investigation</div>
-        <h3 class="work-card-title">War and Disinformation in Northern Ethiopia</h3>
-        <p class="work-card-desc">Documented the information warfare dimension of the Tigray conflict, tracking coordinated inauthentic behavior and state-sponsored narratives across platforms.</p>
+        <div class="work-card-type">Annual Report</div>
+        <h3 class="work-card-title">Annual Report 2022: War and Disinformation</h3>
+        <p class="work-card-desc">HaqCheck's annual review of conflict-related disinformation and fact-checks during the war in northern Ethiopia.</p>
         <div class="work-card-meta">
-          <span>2022 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/reports" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+          <span>Mar 2023 &bull; Inform Africa</span>
+          <a href="https://informafrica.net/wp-content/uploads/2023/03/Final-Annual.pdf" class="work-card-link" target="_blank" rel="noopener">Read (PDF) &rarr;</a>
         </div>
       </div>
 
       <div class="work-card reveal">
         <div class="work-card-type">DISARM Framework</div>
-        <h3 class="work-card-title">Disinformation Pathways &amp; Countermeasures</h3>
-        <p class="work-card-desc">Contributed case studies and methodology documentation to the DISARM Framework knowledge base, developing tools for structured analysis of influence operations.</p>
+        <h3 class="work-card-title">DISARM Framework Documentation</h3>
+        <p class="work-card-desc">Contributed case studies and methodology documentation to the DISARM Framework knowledge base for structured analysis of influence operations.</p>
         <div class="work-card-meta">
-          <span>2022 &bull; CIPESA / Data Knowledge Hub</span>
+          <span>Contributor &bull; Data Knowledge Hub</span>
           <a href="https://data-knowledge-hub.com" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
         </div>
       </div>
@@ -1147,15 +1211,21 @@ footer {
 <!-- ===== MEDIA & MENTIONS ===== -->
 <section class="media" id="media">
   <div class="container">
-    <span class="section-label reveal">Press &amp; Citations</span>
-    <h2 class="section-title reveal">Media Mentions &amp; Research References</h2>
-    <p class="reveal" style="color:var(--color-text-muted);max-width:600px;margin-bottom:0.5rem;">Featured in international press, cited in academic and policy research, and referenced by organizations working on press freedom, digital rights, and information integrity.</p>
+    <span class="section-label reveal">Recognition</span>
+    <h2 class="section-title reveal">Recognition &amp; References</h2>
+    <p class="reveal" style="color:var(--color-text-muted);max-width:600px;margin-bottom:0.5rem;">Organizations that have featured, accredited, or recognized my work.</p>
     <div class="media-grid">
 
       <div class="media-item reveal">
+        <div class="media-source">IFCN / Poynter Institute</div>
+        <div class="media-title">HaqCheck: IFCN Verified Signatory</div>
+        <div class="media-excerpt">Led HaqCheck through IFCN accreditation, establishing Ethiopia's first internationally recognized fact-checking initiative.</div>
+      </div>
+
+      <div class="media-item reveal">
         <div class="media-source">Business &amp; Human Rights Resource Centre</div>
-        <div class="media-title"><a href="https://www.business-humanrights.org/en/latest-news/tiktoks-response-4/" target="_blank" rel="noopener" style="color:var(--color-text);">TikTok's Official Response to Ethiopia Mass Reporting Investigation</a></div>
-        <div class="media-excerpt">TikTok issued a formal response to Abel's Inform Africa investigation on weaponized content moderation in Ethiopia, published by the Business &amp; Human Rights Resource Centre.</div>
+        <div class="media-title"><a href="https://www.business-humanrights.org/en/latest-news/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" target="_blank" rel="noopener" style="color:var(--color-text);">When AI Moderation Becomes a Weapon (featured)</a></div>
+        <div class="media-excerpt">Featured the March 2026 mass-reporting investigation and invited TikTok to respond. Its response was published in April 2026.</div>
       </div>
 
       <div class="media-item reveal">
@@ -1188,12 +1258,6 @@ footer {
         <div class="media-excerpt">Contributed structured case study documentation and methodology for analyzing disinformation campaigns using the DISARM standard.</div>
       </div>
 
-      <div class="media-item reveal">
-        <div class="media-source">IFCN / Poynter Institute</div>
-        <div class="media-title">HaqCheck: IFCN Signatory</div>
-        <div class="media-excerpt">Led HaqCheck through IFCN accreditation, establishing Ethiopia's first internationally recognized fact-checking initiative.</div>
-      </div>
-
     </div>
     <p class="reveal" style="margin-top:2rem;">
       <a href="#contact" style="font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.05em;">Have a media inquiry? Get in touch &rarr;</a>
@@ -1204,28 +1268,23 @@ footer {
 <!-- ===== COLLABORATE ===== -->
 <section class="collaborate" id="collaborate">
   <div class="container">
-    <span class="section-label reveal">Collaborate</span>
-    <h2 class="section-title reveal">Partnership &amp; Engagement</h2>
+    <span class="section-label reveal">Engagement</span>
+    <h2 class="section-title reveal">Ways to Connect</h2>
     <div class="collab-grid">
+      <div class="collab-card collab-card--primary reveal">
+        <div class="collab-icon">&#128188;</div>
+        <h3 class="collab-title">Hiring Teams</h3>
+        <p class="collab-desc">Full-time, contract, and fixed-term roles in trust and safety, OSINT and digital investigations, influence operations, and AI safety. Remote, hybrid, or on-site anywhere in the U.S.</p>
+      </div>
       <div class="collab-card reveal">
         <div class="collab-icon">&#128269;</div>
         <h3 class="collab-title">Research Collaboration</h3>
-        <p class="collab-desc">Joint investigations into influence operations, AI-generated disinformation, and platform accountability. Experienced with DISARM, OSINT, and FIMI analysis frameworks.</p>
-      </div>
-      <div class="collab-card reveal">
-        <div class="collab-icon">&#127891;</div>
-        <h3 class="collab-title">Speaking &amp; Training</h3>
-        <p class="collab-desc">Keynotes, panels, and workshops on disinformation, digital rights, AI safety, and fact-checking. Available for conferences, universities, and organizational briefings.</p>
-      </div>
-      <div class="collab-card reveal">
-        <div class="collab-icon">&#128220;</div>
-        <h3 class="collab-title">Consulting &amp; Advisory</h3>
-        <p class="collab-desc">Strategic advisory on trust and safety, content moderation policy, media development, and information integrity programming for organizations and platforms.</p>
+        <p class="collab-desc">Joint investigations into influence operations, AI-enabled manipulation, and platform abuse, using DISARM, OSINT, and FIMI analysis frameworks.</p>
       </div>
       <div class="collab-card reveal">
         <div class="collab-icon">&#129309;</div>
-        <h3 class="collab-title">Media &amp; Press</h3>
-        <p class="collab-desc">Available for interviews, expert commentary, and op-ed collaborations on Horn of Africa information dynamics, AI governance, and platform policy.</p>
+        <h3 class="collab-title">Media &amp; Speaking</h3>
+        <p class="collab-desc">Interviews, expert commentary, panels, and training on Horn of Africa information dynamics, verification, and influence operations.</p>
       </div>
     </div>
   </div>
@@ -1238,7 +1297,7 @@ footer {
     <h2 class="section-title reveal">Let's Connect</h2>
     <div class="contact-grid">
       <div class="contact-info reveal">
-        <p>I'm open to new opportunities in trust and safety, influence operations analysis, AI governance, and digital policy. Whether you're a recruiter, researcher, journalist, or potential collaborator, I'd like to hear from you.</p>
+        <p>I'm pursuing full-time, contract, and fixed-term roles in trust and safety, OSINT and digital investigations, influence operations, and AI safety, remote, hybrid, or on-site anywhere in the U.S. I'm authorized to work in the U.S. without sponsorship. Recruiters and hiring teams can email me directly or use the form.</p>
         <div class="contact-methods">
           <div class="contact-method">
             <div class="contact-method-icon">&#9993;</div>
@@ -1252,9 +1311,6 @@ footer {
         <div class="social-links">
           <a href="https://www.linkedin.com/in/abel-wabella-sugebo/" class="social-link" target="_blank" rel="noopener" title="LinkedIn">in</a>
           <a href="https://x.com/abelpoly" class="social-link" target="_blank" rel="noopener" title="X (Twitter)">&#120143;</a>
-          <a href="https://bsky.app/" class="social-link" target="_blank" rel="noopener" title="Bluesky">&#9729;</a>
-          <a href="https://www.youtube.com/@AddisZeybe" class="social-link" target="_blank" rel="noopener" title="YouTube">&#9654;</a>
-          <a href="https://www.tiktok.com/@haqcheck" class="social-link" target="_blank" rel="noopener" title="TikTok">&#9835;</a>
         </div>
       </div>
       <!-- Contact form: posts to Formspree (https://formspree.io/f/mpqyyvno), which emails each message to Abel.
@@ -1280,7 +1336,7 @@ footer {
         </div>
         <div class="form-group">
           <label class="form-label" for="formMessage">Message</label>
-          <textarea class="form-textarea" name="message" id="formMessage" placeholder="Tell me about your project, opportunity, or inquiry..." maxlength="5000" required></textarea>
+          <textarea class="form-textarea" name="message" id="formMessage" placeholder="Tell me about the role, project, or inquiry..." maxlength="5000" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="formSubmit" style="align-self:flex-start;">Send Message</button>
         <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
@@ -1296,9 +1352,9 @@ footer {
       <div class="footer-text">&copy; 2026 Abel Wabella Sugebo. All rights reserved.</div>
       <div class="footer-links">
         <a href="#hero">Home</a>
+        <a href="#investigations">Investigations</a>
         <a href="#about">About</a>
-        <a href="#cv">Resume</a>
-        <a href="#work">Work</a>
+        <a href="#cv">Experience</a>
         <a href="#contact">Contact</a>
       </div>
     </div>

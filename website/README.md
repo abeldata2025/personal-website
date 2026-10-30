@@ -1,6 +1,6 @@
-# Abel Wabella Sugebo — Personal Website
+# Abel Wabella Sugebo | Personal Website
 
-Professional portfolio site for Abel Wabella Sugebo, media integrity researcher, AI governance expert, and founder of Inform Africa / HaqCheck.
+Professional portfolio site for Abel Wabella Sugebo, an information-integrity and OSINT researcher focused on trust and safety, influence operations, and platform abuse.
 
 ## Live Site
 
@@ -9,11 +9,11 @@ Professional portfolio site for Abel Wabella Sugebo, media integrity researcher,
 ## About
 
 Single-page professional website featuring:
+- Three featured investigations (question, evidence, takeaway)
 - Professional bio and expertise overview
-- Resume / career timeline
-- Selected research and publications
-- Media mentions and press coverage
-- Partnership and collaboration opportunities
+- Experience timeline
+- Further research and publications
+- Recognition and references
 - Contact form
 
 ## Tech Stack
