@@ -228,6 +228,24 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
   max-width: 540px;
   margin-bottom: 2.25rem;
 }
+.hero-status {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--color-accent-light);
+  margin: -0.75rem 0 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.hero-status::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+  flex-shrink: 0;
+}
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -298,8 +316,9 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
 
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .hero-photo { order: -1; max-width: 240px; margin: 0 auto; }
+  .hero-photo { max-width: 220px; margin: 0 auto; }
   .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-status { justify-content: center; }
   .hero-actions { justify-content: center; }
   .hero-badges { justify-content: center; }
 }
@@ -482,12 +501,12 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.3); }
   margin-top: 0.9rem;
 }
 .case-facts dd {
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   color: var(--color-text-muted);
   line-height: 1.6;
   margin-top: 0.2rem;
 }
-.case-card .work-card-meta { gap: 1rem; }
+.case-card .work-card-meta { gap: 0.4rem 1rem; flex-wrap: wrap; }
 
 /* ===== ABOUT ===== */
 .about { padding: var(--section-pad) 0; }
@@ -869,20 +888,21 @@ footer {
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
-        <span class="hero-eyebrow">Information Integrity &bull; Trust &amp; Safety &bull; OSINT</span>
+        <span class="hero-eyebrow">Information Integrity &bull; Trust &amp; Safety &bull; AI Safety</span>
         <h1 class="hero-title">Investigating<br><em>influence operations</em><br>and platform abuse</h1>
         <p class="hero-subtitle">
           I'm Abel Wabella Sugebo, an information-integrity and OSINT researcher based in Washington, DC. I served as Inform Africa's principal contact in Meta's Trusted Partner program, preparing and tracking content, account, and imminent-harm escalations for Ethiopia and the Horn of Africa.
         </p>
+        <p class="hero-status">Open to full-time, contract, and fixed-term roles across the U.S.</p>
         <div class="hero-actions">
           <a href="#investigations" class="btn btn-primary">View Investigations</a>
-          <a href="#cv" class="btn btn-outline">View Experience</a>
+          <a href="#cv" class="btn btn-outline">View Resume</a>
         </div>
         <div class="hero-badges">
           <span class="badge">OSINT &amp; DISARM</span>
-          <span class="badge">Trust &amp; Safety</span>
           <span class="badge">Influence Operations</span>
-          <span class="badge">AI Safety</span>
+          <span class="badge">Platform Escalations</span>
+          <span class="badge">AI-Enabled Threats</span>
         </div>
       </div>
       <div class="hero-photo">
@@ -937,7 +957,7 @@ footer {
         </dl>
         <div class="work-card-meta">
           <span>Mar 2026 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+          <a href="https://informafrica.net/2026/03/15/when-ai-moderation-becomes-a-weapon-ethiopias-mass-reporting-crisis/" class="work-card-link" target="_blank" rel="noopener">Full investigation &rarr;</a>
         </div>
       </article>
 
@@ -954,7 +974,7 @@ footer {
         </dl>
         <div class="work-card-meta">
           <span>Oct 2026 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="work-card-link" target="_blank" rel="noopener">Read &rarr;</a>
+          <a href="https://informafrica.net/2026/10/08/false-in-2021-asserted-in-2026-eritrean-troops-and-the-politics-of-verification/" class="work-card-link" target="_blank" rel="noopener">Full investigation &rarr;</a>
         </div>
       </article>
 
@@ -971,7 +991,7 @@ footer {
         </dl>
         <div class="work-card-meta">
           <span>Dec 2025 &bull; Inform Africa</span>
-          <a href="https://informafrica.net/wp-content/uploads/2025/12/Disarm-Case-Study_-AI-Generated-Propaganda-Linking-GERD-Pride-To-_Assab_Sea-Access_-Narratives_final_inform_africa.pdf" class="work-card-link" target="_blank" rel="noopener">Read (PDF) &rarr;</a>
+          <a href="https://informafrica.net/wp-content/uploads/2025/12/Disarm-Case-Study_-AI-Generated-Propaganda-Linking-GERD-Pride-To-_Assab_Sea-Access_-Narratives_final_inform_africa.pdf" class="work-card-link" target="_blank" rel="noopener">Full case study (PDF) &rarr;</a>
         </div>
       </article>
 
